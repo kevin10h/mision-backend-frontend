@@ -8,5 +8,5 @@ Bienvenidos al repositorio del Proyecto del Curso Diseño de Base de Datos del G
 
 2. [Frontend](frontend/frontend.md)
 
-3. [SQL Definitivo](SQL definitivo/SQL.md)
+3. [SQL Definitivo](SQL_definitivo/SQL.md)
 
