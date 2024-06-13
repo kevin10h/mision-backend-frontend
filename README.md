@@ -6,5 +6,5 @@ Bienvenidos al repositorio del Proyecto del Curso Diseño de Base de Datos del G
 
 1. [Backend](backend/backend.md)
 
-2. [Frontend]()
+2. [Frontend](frontend/frontend.md)
 
