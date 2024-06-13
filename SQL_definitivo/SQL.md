@@ -1,3 +1,4 @@
+```java
 -- Creación de la secuencia para solicitud_herramienta
 CREATE SEQUENCE seq_solicitud START 1;
 
@@ -287,3 +288,4 @@ CREATE TABLE Nomina
     FOREIGN KEY (Id_deduccion) REFERENCES Deduccion(Id_deduccion),
     FOREIGN KEY (Id_sueldo_base) REFERENCES Tipo_Sueldo_Base(Id_sueldo_base)
 );
+
