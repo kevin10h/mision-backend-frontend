@@ -1,9 +1,9 @@
 - [Gordillo Inocente Mikhael León](mikhael.md)
-- [Grijalva Parra Francisco Leonel](Francisco%20Grijalva/FranciscoGrijalva.md)
-- [Huaman Yance Kevin Sebastian](Huaman%20Kevin/HuamanKevin.md)
-- [Loayza Segura Roger Salvador](Roger%20Loayza/RogerLoayza.md)
-- [Lock Brañez Peter Alexander](Peter%20Lock/PeterLock.md)
-- [Otero Vicente Daniel Mauricio](Mauricio%20Otero%20Vicente/MauricioOtero.md)
+- [Grijalva Parra Francisco Leonel](Grijalva.md)
+- [Huaman Yance Kevin Sebastian](kevin.md)
+- [Loayza Segura Roger Salvador](Loayza.md)
+- [Lock Brañez Peter Alexander](pipo.md)
+- [Otero Vicente Daniel Mauricio](otero.md)
 
 
 
