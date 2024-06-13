@@ -1,4 +1,4 @@
-- [Gordillo Inocente Mikhael León](backend/mikhael.md)
+- [Gordillo Inocente Mikhael León](mikhael.md)
 - [Grijalva Parra Francisco Leonel](Francisco%20Grijalva/FranciscoGrijalva.md)
 - [Huaman Yance Kevin Sebastian](Huaman%20Kevin/HuamanKevin.md)
 - [Loayza Segura Roger Salvador](Roger%20Loayza/RogerLoayza.md)
