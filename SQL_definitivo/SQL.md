@@ -16,7 +16,8 @@ CREATE TABLE herramienta (
     id_herramienta VARCHAR(6) PRIMARY KEY,
     nombre_herramienta VARCHAR(50),
     modelo VARCHAR(50),
-    nombre_proveedor VARCHAR(50)
+    nombre_proveedor VARCHAR(50),
+	disponible BOOLEAN DEFAULT TRUE
 );
 
 CREATE TABLE gestor_produccion
@@ -115,18 +116,23 @@ CREATE TABLE operario_telefono
   PRIMARY KEY (telefono, id_operario),
   FOREIGN KEY (id_operario) REFERENCES operario(id_operario)
 );
-
+CREATE TABLE estado_soli_herra(
+	id_est_soli_herra VARCHAR(6) PRIMARY KEY,
+	nom_est_soli_herra VARCHAR(50) DEFAULT 'Pendiente'
+);
 CREATE TABLE solicitud_herramienta (
-    id_solicitud VARCHAR(6) PRIMARY KEY DEFAULT gen_id('SOL', 'seq_solicitud'),
+    id_solicitud VARCHAR(10) PRIMARY KEY DEFAULT gen_id('SOL', 'seq_solicitud'),
     fecha_solicitud TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
-    estado_solicitud VARCHAR(50) DEFAULT 'Pendiente',
+    id_est_soli_herra VARCHAR(6) NOT NULL,
     id_operario VARCHAR(6) NOT NULL,
     id_gestor VARCHAR(6),
 	id_herramienta VARCHAR(6) NOT NULL,
     FOREIGN KEY (id_operario) REFERENCES operario(id_operario),
 	FOREIGN KEY (id_herramienta) REFERENCES herramienta(id_herramienta),
-    FOREIGN KEY (id_gestor) REFERENCES gestor_produccion(id_gestor)
+    FOREIGN KEY (id_gestor) REFERENCES gestor_produccion(id_gestor),
+	FOREIGN KEY (id_est_soli_herra) REFERENCES estado_soli_herra(id_est_soli_herra)
 );
+	
 
 CREATE TABLE mantenimiento_herramienta (
     id_mantenimiento_herramienta VARCHAR(6) PRIMARY KEY,
@@ -289,3 +295,17 @@ CREATE TABLE Nomina
     FOREIGN KEY (Id_sueldo_base) REFERENCES Tipo_Sueldo_Base(Id_sueldo_base)
 );
 
+CREATE OR REPLACE FUNCTION adjust_seq_solicitud() RETURNS TRIGGER AS $$
+BEGIN
+    IF NEW.id_solicitud IS NOT NULL THEN
+        PERFORM setval('seq_solicitud', GREATEST((SELECT MAX(CAST(SUBSTRING(id_solicitud, 4) AS INTEGER)) FROM solicitud_herramienta), nextval('seq_solicitud')-1));
+    END IF;
+    RETURN NEW;
+END;
+$$ LANGUAGE plpgsql;
+
+-- Crear el Trigger
+CREATE TRIGGER trg_adjust_seq_solicitud
+BEFORE INSERT ON solicitud_herramienta
+FOR EACH ROW
+EXECUTE FUNCTION adjust_seq_solicitud();
