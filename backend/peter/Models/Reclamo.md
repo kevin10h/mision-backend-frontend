@@ -10,6 +10,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class reclamo {
     String id_reclamo;
+    Timestamp fecha_reclamo;
     String descripcion_reclamo;
     String estado_reclamo;
 
