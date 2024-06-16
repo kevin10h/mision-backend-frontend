@@ -1,6 +1,6 @@
 - [Gordillo Inocente Mikhael León](mikhael.md)
 - [Grijalva Parra Francisco Leonel](Grijalva.md)
-- [Huaman Yance Kevin Sebastian](backend/kevin/kevin.md)
+- [Huaman Yance Kevin Sebastian](kevin/kevin.md)
 - [Loayza Segura Roger Salvador](Loayza.md)
 - [Lock Brañez Peter Alexander](pipo.md)
 - [Otero Vicente Daniel Mauricio](otero.md)
