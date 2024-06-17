@@ -1,4 +1,49 @@
 ```java
+-- Eliminar tablas si existen
+DROP TABLE IF EXISTS herramienta CASCADE;
+DROP TABLE IF EXISTS gestor_produccion CASCADE;
+DROP TABLE IF EXISTS actividad CASCADE;
+DROP TABLE IF EXISTS lote CASCADE;
+DROP TABLE IF EXISTS gestor_produccion_telefono CASCADE;
+DROP TABLE IF EXISTS categoria_taller CASCADE;
+DROP TABLE IF EXISTS estado_actividad CASCADE;
+DROP TABLE IF EXISTS taller CASCADE;
+DROP TABLE IF EXISTS operario CASCADE;
+DROP TABLE IF EXISTS asignacion_actividad CASCADE;
+DROP TABLE IF EXISTS operario_telefono CASCADE;
+DROP TABLE IF EXISTS estado_soli_herra CASCADE;
+DROP TABLE IF EXISTS solicitud_herramienta CASCADE;
+DROP TABLE IF EXISTS mantenimiento_herramienta CASCADE;
+DROP TABLE IF EXISTS Estado_Reclamo CASCADE;
+DROP TABLE IF EXISTS Descripcion_reclamo CASCADE;
+DROP TABLE IF EXISTS Reclamo CASCADE;
+DROP TABLE IF EXISTS Reporte_reclamo CASCADE;
+DROP TABLE IF EXISTS Reporte_herramienta CASCADE;
+DROP TABLE IF EXISTS Tipo_deduccion CASCADE;
+DROP TABLE IF EXISTS Deduccion CASCADE;
+DROP TABLE IF EXISTS Tipo_Sueldo_Base CASCADE;
+DROP TABLE IF EXISTS Tipo_Bonificacion CASCADE;
+DROP TABLE IF EXISTS Bonificacion CASCADE;
+DROP TABLE IF EXISTS Periodo_pago CASCADE;
+DROP TABLE IF EXISTS Nomina CASCADE;
+
+-- Eliminar secuencia si existe
+DROP SEQUENCE IF EXISTS seq_solicitud;
+
+-- Eliminar función si existe
+DROP FUNCTION IF EXISTS gen_id(prefix TEXT, seq_name TEXT);
+
+-- Eliminar vistas si existen
+DROP VIEW IF EXISTS Reporte_Reclamos_Por_Fecha;
+DROP VIEW IF EXISTS Reporte_Reclamos_Por_Descripcion;
+DROP VIEW IF EXISTS Reporte_Reclamos_Por_Estado;
+DROP VIEW IF EXISTS Reporte_Reclamos_Por_Operario;
+
+-- Eliminar función y trigger si existen
+DROP FUNCTION IF EXISTS adjust_seq_solicitud();
+DROP TRIGGER IF EXISTS trg_adjust_seq_solicitud ON solicitud_herramienta;
+
+
 -- Creación de la secuencia para solicitud_herramienta
 CREATE SEQUENCE seq_solicitud START 1;
 
@@ -61,11 +106,11 @@ CREATE TABLE categoria_taller
   PRIMARY KEY (id_cate_taller)
 );
 
-CREATE TABLE estado_actividad
+CREATE TABLE estado_asignacion
 (
-  id_est_actividad CHAR(6) NOT NULL,
-  nom_est_actividad VARCHAR(50) NOT NULL,
-  PRIMARY KEY (id_est_actividad)
+  id_est_asignacion CHAR(6) NOT NULL,
+  nom_est_asignacion VARCHAR(50) NOT NULL,
+  PRIMARY KEY (id_est_asignacion)
 );
 
 CREATE TABLE taller
@@ -100,13 +145,13 @@ CREATE TABLE asignacion_actividad
   id_lote CHAR(6) NOT NULL,
   id_actividad CHAR(6) NOT NULL,
   id_operario CHAR(6) NOT NULL,
-  id_est_actividad CHAR(6) NOT NULL,
+  id_est_asignacion CHAR(6) NOT NULL,
   PRIMARY KEY (id_asignacion),
   FOREIGN KEY (id_gestor) REFERENCES gestor_produccion(id_gestor),
   FOREIGN KEY (id_lote) REFERENCES lote(id_lote),
   FOREIGN KEY (id_actividad) REFERENCES actividad(id_actividad),
   FOREIGN KEY (id_operario) REFERENCES operario(id_operario),
-  FOREIGN KEY (id_est_actividad) REFERENCES estado_actividad(id_est_actividad)
+  FOREIGN KEY (id_est_asignacion) REFERENCES estado_asignacion(id_est_asignacion)
 );
 
 CREATE TABLE operario_telefono
@@ -303,6 +348,12 @@ BEGIN
     RETURN NEW;
 END;
 $$ LANGUAGE plpgsql;
+
+-- Crear el Trigger
+CREATE TRIGGER trg_adjust_seq_solicitud
+BEFORE INSERT ON solicitud_herramienta
+FOR EACH ROW
+EXECUTE FUNCTION adjust_seq_solicitud();
 
 -- Crear el Trigger
 CREATE TRIGGER trg_adjust_seq_solicitud
