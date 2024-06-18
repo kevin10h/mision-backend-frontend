@@ -1,3 +1,4 @@
+```java
 <!DOCTYPE html>
 <html>
   <head>
