@@ -1,0 +1,146 @@
+body {
+  background-color: #f4f4f4;
+  font-family: sans-serif;
+}
+
+.container {
+  display: flex;
+  margin: 50px auto;
+  width: 80%;
+  max-width: 1000px;
+}
+
+.sidebar {
+  background-color: #f0f0f0;
+  padding: 20px;
+  width: 200px;
+  margin-right: 20px;
+  border-radius: 5px;
+}
+
+.sidebar h1 {
+  margin-top: 0;
+  font-size: 1.2em;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar li {
+  padding: 10px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.sidebar li:last-child {
+  border-bottom: none;
+}
+
+.sidebar .user {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.sidebar .user img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.sidebar button {
+  background-color: #d3d3d3;
+  color: black;
+  padding: 10px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  width: 100%;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: 16px;
+}
+
+.sidebar button i {
+  margin-right: 10px;
+}
+
+.sidebar button:hover {
+  background-color: #a9a9a9;
+}
+
+.main {
+  flex: 1;
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.main h2 {
+  background-color: #f0f0f0;
+  padding: 10px;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.main .form-group {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.main .form-group label {
+  margin-right: 10px;
+}
+
+.main .form-group input[type="text"],
+.main .form-group select,
+.main .form-group input[type="number"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+}
+
+.main .table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.main .table th,
+.main .table td {
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+.main .table th {
+  background-color: #f0f0f0;
+}
+
+.main button {
+  background-color: #007BFF;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.main button:hover {
+  background-color: #0056b3;
+}
+
+.main .actions {
+  display: flex;
+  justify-content: space-between;
+}
+
+.main .actions button {
+  margin-right: 10px;
+}

@@ -1,0 +1,55 @@
+<section>
+  <div class="container">
+    <div class="sidebar">
+      <h1>Empresa Topitop S.A</h1>
+      <div class="user">
+        <!-- <img src="https://www.w3schools.com/howto/img_avatar.png" alt="Avatar"> -->
+        <img src="assets/imgs/enfermito.png" alt="Avatar">
+        <span>Gestor de producción</span>
+      </div>
+      <ul>
+        <li><button><i class="fas fa-wrench"></i> Solicitud de herramienta</button></li>
+        <li><button><i class="fas fa-clipboard-list"></i> Solicitud de pedido</button></li>
+        <li><button><i class="fas fa-certificate"></i> Registro de calidad</button></li>
+        <li><button><i class="fas fa-file-alt"></i> Remuneración</button></li>
+        <li><button><i class="fas fa-file-invoice-dollar"></i> Reportes</button></li>
+        <li><button><i class="fas fa-bullhorn"></i> Reclamos y Observaciones</button></li>
+        <li><button><i class="fas fa-clipboard-check"></i> Actividades</button></li>
+      </ul>
+    </div>
+    <div class="main">
+      <h2>Bonificación</h2>
+      <div class="form-group">
+        <label for="ID Bonificación">ID Bonificación:</label>
+        <input type="text" id="ID Bonificación" placeholder="Enter ID Bonificación" [(ngModel)]="busqueda_id_bonif"
+          (change)="getBonificaciones(busqueda_id_bonif,id_tipo_bonificacion)">
+      </div>
+      <div class="form-group">
+        <label for="Tipo de bonificación">Tipo de bonificación: </label>
+        <select id="Tipo de bonificación" [(ngModel)]="id_tipo_bonificacion" (change)="getBonificaciones(busqueda_id_bonif,id_tipo_bonificacion)">
+          <option value="">Todos</option>
+          <option value="BON001">Productividad</option>
+          <option value="BON002">Asistencia perfecta</option>
+          <option value="BON003">Antigüedad</option>
+          <option value="BON004">Otros</option>
+        </select>
+      </div>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>ID Bonificación</th>
+            <th>Monto</th>
+            <th>Tipo de bonificación</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let bonificacion of bonificaciones">
+            <td>{{bonificacion.id_bonificacion}}</td>
+            <td>{{bonificacion.monto_bonificacion}}</td>
+            <td>{{bonificacion.tipo_bonificacion}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
