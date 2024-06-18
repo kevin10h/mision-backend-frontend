@@ -91,7 +91,7 @@ body {
 .search-bar button:hover {
     background-color: rgb(75, 114, 205);
     padding: 10px;
-    border-radius: 5px
+    border-radius: 5px;
 }
 
 .search-bar button img {
@@ -103,6 +103,12 @@ body {
     border-radius: 5px;
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.table-wrapper {
+    max-height: 400px;
+    /* Adjust height as needed */
+    overflow-y: auto;
 }
 
 table {
@@ -138,12 +144,10 @@ table tr:hover {
     background-color: #5cb85c;
     border-radius: 5px;
     padding: 5px;
-    width: 50%;
 }
 
 .reject-icon {
     background-color: #d9534f;
     border-radius: 5px;
     padding: 5px;
-    width: 50%;
 }
