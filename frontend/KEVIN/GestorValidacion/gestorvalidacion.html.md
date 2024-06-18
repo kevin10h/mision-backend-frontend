@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Solicitud de Herramienta</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="estilo.css">
 </head>
 
 <body>
@@ -49,116 +49,118 @@
         </div>
         <div class="table-container">
             <h2>Listado de Solicitudes de herramientas</h2>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Codigo de Solicitud</th>
-                        <th>Nombre de Usuario</th>
-                        <th>Modelo</th>
-                        <th>Nombre de la herramienta</th>
-                        <th>Confirmar</th>
-                        <th>Rechazar</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>SL0003</td>
-                        <td>Brodie Wilmer Spurryer</td>
-                        <td>"Embroi</td>
-                        <td>Máquina de coser recta</td>
-                        <td><img src="confirm-icon.png" alt="Confirm Icon"></td>
-                        <td><img src="reject-icon.png" alt="Reject Icon"></td>
-                    </tr>
-                    <tr>
-                        <td>SL0005</td>
-                        <td>Alison Boot Morston</td>
-                        <td>E- Pro 6000"</td>
-                        <td>Máquina de coser recta</td>
-                        <td><img src="confirm-icon.png" alt="Confirm Icon"></td>
-                        <td><img src="reject-icon.png" alt="Reject Icon"></td>
-                    </tr>
-                    <tr>
-                        <td>SL0020</td>
-                        <td>Sansone Claire Sire</td>
-                        <td>SwiftStitch 2000</td>
-                        <td>Máquina de coser recta</td>
-                        <td><img src="confirm-icon.png" alt="Confirm Icon"></td>
-                        <td><img src="reject-icon.png" alt="Reject Icon"></td>
-                    </tr>
-                    <tr>
-                        <td>SL0065</td>
-                        <td>Rosanna Dyanne Knocker</td>
-                        <td>LaserCut Pro 3000</td>
-                        <td>Máquina de coser recta</td>
-                        <td><img src="confirm-icon.png" alt="Confirm Icon"></td>
-                        <td><img src="reject-icon.png" alt="Reject Icon"></td>
-                    </tr>
-                    <tr>
-                        <td>SL0120</td>
-                        <td>Frannie Cherice Pittman</td>
-                        <td>DyeMax Pro</td>
-                        <td>Máquina de coser recta</td>
-                        <td><img src="confirm-icon.png" alt="Confirm Icon"></td>
-                        <td><img src="reject-icon.png" alt="Reject Icon"></td>
-                    </tr>
-                    <tr>
-                        <td>SL0196</td>
-                        <td>Aristotle Lira Aspenlon</td>
-                        <td>LaserPro X</td>
-                        <td>Máquina de coser recta</td>
-                        <td><img src="confirm-icon.png" alt="Confirm Icon"></td>
-                        <td><img src="reject-icon.png" alt="Reject Icon"></td>
-                    </tr>
-                    <tr>
-                        <td>SL0023</td>
-                        <td>Karin Cathee Moorhead</td>
-                        <td>SewPro Plus</td>
-                        <td>Máquina de coser recta</td>
-                        <td><img src="confirm-icon.png" alt="Confirm Icon"></td>
-                        <td><img src="reject-icon.png" alt="Reject Icon"></td>
-                    </tr>
-                    <tr>
-                        <td>SL0112</td>
-                        <td>Benson Ericie Sanpere</td>
-                        <td>LaserCut-5000</td>
-                        <td>Máquina de coser recta</td>
-                        <td><img src="confirm-icon.png" alt="Confirm Icon"></td>
-                        <td><img src="reject-icon.png" alt="Reject Icon"></td>
-                    </tr>
-                    <tr>
-                        <td>SL0113</td>
-                        <td>Caspar Gus Playford</td>
-                        <td>LaserCut-5000</td>
-                        <td>Máquina de coser recta</td>
-                        <td><img src="confirm-icon.png" alt="Confirm Icon"></td>
-                        <td><img src="reject-icon.png" alt="Reject Icon"></td>
-                    </tr>
-                    <tr>
-                        <td>SL0099</td>
-                        <td>Stefano Raynell Biaggi</td>
-                        <td>LaserCut-5000</td>
-                        <td>Máquina de coser recta</td>
-                        <td><img src="confirm-icon.png" alt="Confirm Icon"></td>
-                        <td><img src="reject-icon.png" alt="Reject Icon"></td>
-                    </tr>
-                    <tr>
-                        <td>SL0065</td>
-                        <td>Jobye Winna Lambard</td>
-                        <td>LaserCut-5000</td>
-                        <td>Máquina de coser recta</td>
-                        <td><img src="confirm-icon.png" alt="Confirm Icon"></td>
-                        <td><img src="reject-icon.png" alt="Reject Icon"></td>
-                    </tr>
-                    <tr>
-                        <td>SL0199</td>
-                        <td>Hamilton Elnis Ellis</td>
-                        <td>LaserCut-5000</td>
-                        <td>PrintMaster Flex 2</td>
-                        <td><img src="confirm-icon.png" alt="Confirm Icon"></td>
-                        <td><img src="reject-icon.png" alt="Reject Icon"></td>
-                    </tr>
-                </tbody>
-            </table>
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Codigo de Solicitud</th>
+                            <th>Nombre de Usuario</th>
+                            <th>Modelo</th>
+                            <th>Nombre de la herramienta</th>
+                            <th>Confirmar</th>
+                            <th>Rechazar</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>SL0003</td>
+                            <td>Brodie Wilmer Spurryer</td>
+                            <td>"Embroi</td>
+                            <td>Máquina de coser recta</td>
+                            <td><img src="confirm-icon.png" alt="Confirm Icon"></td>
+                            <td><img src="reject-icon.png" alt="Reject Icon"></td>
+                        </tr>
+                        <tr>
+                            <td>SL0005</td>
+                            <td>Alison Boot Morston</td>
+                            <td>E- Pro 6000"</td>
+                            <td>Máquina de coser recta</td>
+                            <td><img src="confirm-icon.png" alt="Confirm Icon"></td>
+                            <td><img src="reject-icon.png" alt="Reject Icon"></td>
+                        </tr>
+                        <tr>
+                            <td>SL0020</td>
+                            <td>Sansone Claire Sire</td>
+                            <td>SwiftStitch 2000</td>
+                            <td>Máquina de coser recta</td>
+                            <td><img src="confirm-icon.png" alt="Confirm Icon"></td>
+                            <td><img src="reject-icon.png" alt="Reject Icon"></td>
+                        </tr>
+                        <tr>
+                            <td>SL0065</td>
+                            <td>Rosanna Dyanne Knocker</td>
+                            <td>LaserCut Pro 3000</td>
+                            <td>Máquina de coser recta</td>
+                            <td><img src="confirm-icon.png" alt="Confirm Icon"></td>
+                            <td><img src="reject-icon.png" alt="Reject Icon"></td>
+                        </tr>
+                        <tr>
+                            <td>SL0120</td>
+                            <td>Frannie Cherice Pittman</td>
+                            <td>DyeMax Pro</td>
+                            <td>Máquina de coser recta</td>
+                            <td><img src="confirm-icon.png" alt="Confirm Icon"></td>
+                            <td><img src="reject-icon.png" alt="Reject Icon"></td>
+                        </tr>
+                        <tr>
+                            <td>SL0196</td>
+                            <td>Aristotle Lira Aspenlon</td>
+                            <td>LaserPro X</td>
+                            <td>Máquina de coser recta</td>
+                            <td><img src="confirm-icon.png" alt="Confirm Icon"></td>
+                            <td><img src="reject-icon.png" alt="Reject Icon"></td>
+                        </tr>
+                        <tr>
+                            <td>SL0023</td>
+                            <td>Karin Cathee Moorhead</td>
+                            <td>SewPro Plus</td>
+                            <td>Máquina de coser recta</td>
+                            <td><img src="confirm-icon.png" alt="Confirm Icon"></td>
+                            <td><img src="reject-icon.png" alt="Reject Icon"></td>
+                        </tr>
+                        <tr>
+                            <td>SL0112</td>
+                            <td>Benson Ericie Sanpere</td>
+                            <td>LaserCut-5000</td>
+                            <td>Máquina de coser recta</td>
+                            <td><img src="confirm-icon.png" alt="Confirm Icon"></td>
+                            <td><img src="reject-icon.png" alt="Reject Icon"></td>
+                        </tr>
+                        <tr>
+                            <td>SL0113</td>
+                            <td>Caspar Gus Playford</td>
+                            <td>LaserCut-5000</td>
+                            <td>Máquina de coser recta</td>
+                            <td><img src="confirm-icon.png" alt="Confirm Icon"></td>
+                            <td><img src="reject-icon.png" alt="Reject Icon"></td>
+                        </tr>
+                        <tr>
+                            <td>SL0099</td>
+                            <td>Stefano Raynell Biaggi</td>
+                            <td>LaserCut-5000</td>
+                            <td>Máquina de coser recta</td>
+                            <td><img src="confirm-icon.png" alt="Confirm Icon"></td>
+                            <td><img src="reject-icon.png" alt="Reject Icon"></td>
+                        </tr>
+                        <tr>
+                            <td>SL0065</td>
+                            <td>Jobye Winna Lambard</td>
+                            <td>LaserCut-5000</td>
+                            <td>Máquina de coser recta</td>
+                            <td><img src="confirm-icon.png" alt="Confirm Icon"></td>
+                            <td><img src="reject-icon.png" alt="Reject Icon"></td>
+                        </tr>
+                        <tr>
+                            <td>SL0199</td>
+                            <td>Hamilton Elnis Ellis</td>
+                            <td>LaserCut-5000</td>
+                            <td>PrintMaster Flex 2</td>
+                            <td><img src="confirm-icon.png" alt="Confirm Icon"></td>
+                            <td><img src="reject-icon.png" alt="Reject Icon"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
     </div>
 </body>
