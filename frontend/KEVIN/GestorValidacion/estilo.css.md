@@ -1,9 +1,8 @@
-```java
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     display: flex;
-    height: 100vh;
+    height: 110vh;
 }
 
 .sidebar {
@@ -15,21 +14,24 @@ body {
 
 .sidebar .logo {
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
+    font-size: 1.5em;
 }
 
 .sidebar .user-info {
     text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: 50px;
 }
 
 .sidebar .user-info img {
-    width: 60px;
+    width: 80px;
     border-radius: 50%;
+    margin-bottom: 10px;
 }
 
 .sidebar .user-info .username {
     font-weight: bold;
+    font-size: 1.2em;
 }
 
 .sidebar .menu {
@@ -38,7 +40,7 @@ body {
 }
 
 .sidebar .menu li {
-    margin-bottom: 20px;
+    margin-bottom: 25px;
 }
 
 .sidebar .menu li a {
@@ -47,16 +49,18 @@ body {
     font-weight: bold;
     display: flex;
     align-items: center;
+    padding: 10px 15px;
+    font-size: 1.1em;
 }
 
 .sidebar .menu li a img {
-    width: 20px;
-    margin-right: 10px;
+    width: 25px;
+    margin-right: 15px;
 }
 
 .sidebar .menu li:hover {
     background-color: white;
-    padding: 10px;
+    padding: 10px 15px;
     border-radius: 5px;
 }
 
@@ -106,8 +110,7 @@ body {
 }
 
 .table-wrapper {
-    max-height: 400px;
-    /* Adjust height as needed */
+    max-height: 500px;
     overflow-y: auto;
 }
 
@@ -140,6 +143,8 @@ table tr:hover {
     cursor: pointer;
 }
 
+
+/*
 .confirm-icon {
     background-color: #5cb85c;
     border-radius: 5px;
@@ -150,4 +155,26 @@ table tr:hover {
     background-color: #d9534f;
     border-radius: 5px;
     padding: 5px;
+}
+*/
+
+.confirm-button,
+.reject-button {
+    width: 40px;
+    height: 40px;
+    border: none;
+    cursor: pointer;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.confirm-button {
+    background-color: #5cb85c;
+    background-image: url('confirm-icon.png');
+}
+
+.reject-button {
+    background-color: #d9534f;
+    background-image: url('reject-icon.png');
 }
