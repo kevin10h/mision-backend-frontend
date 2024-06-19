@@ -1,4 +1,4 @@
-package uni.pe.DBD.models;
+package uni.pe.DBD.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -7,8 +7,7 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Gestor {
-    String id_gestor;
-    String gestor;
-    String dni;
+public class DeduccionDto {
+    String id_deduccion;
+    String id_tipo_deduccion;
 }
