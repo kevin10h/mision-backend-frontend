@@ -354,9 +354,3 @@ CREATE TRIGGER trg_adjust_seq_solicitud
 BEFORE INSERT ON solicitud_herramienta
 FOR EACH ROW
 EXECUTE FUNCTION adjust_seq_solicitud();
-
--- Crear el Trigger
-CREATE TRIGGER trg_adjust_seq_solicitud
-BEFORE INSERT ON solicitud_herramienta
-FOR EACH ROW
-EXECUTE FUNCTION adjust_seq_solicitud();
