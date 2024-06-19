@@ -215,6 +215,33 @@ CREATE TABLE Reclamo
  FOREIGN KEY (Id_estado_reclamo) REFERENCES Estado_Reclamo(Id_estado_reclamo)
 );
 
+CREATE TABLE Estado_Observacion
+(
+ Id_estado_observacion CHAR(6) NOT NULL,
+ Nom_estado_observacion VARCHAR(50) NOT NULL,
+ PRIMARY KEY (Id_estado_observacion)
+);
+
+CREATE TABLE Descripcion_observacion
+(
+ Id_descrip_observacion CHAR(6) NOT NULL,
+ Nom_descrip_observacion VARCHAR(50) NOT NULL,
+ PRIMARY KEY (Id_descrip_observacion)
+);
+
+CREATE TABLE Observacion
+(
+ Id_observacion CHAR(6) NOT NULL,
+ Fecha_observacion DATE NOT NULL,
+ id_asignacion CHAR(6) NOT NULL,
+ Id_descrip_observacion CHAR(6) NOT NULL,
+ Id_estado_observacion CHAR(6) NOT NULL,
+ PRIMARY KEY (Id_observacion),
+ FOREIGN KEY (id_asignacion) REFERENCES asignacion_actividad(id_asignacion),
+ FOREIGN KEY (Id_descrip_observacion) REFERENCES Descripcion_observacion(Id_descrip_observacion),
+ FOREIGN KEY (Id_estado_observacion) REFERENCES Estado_Observacion(Id_estado_observacion)
+);
+
 CREATE TABLE Reporte_reclamo
 (
     Id_reporte CHAR(9) NOT NULL,
