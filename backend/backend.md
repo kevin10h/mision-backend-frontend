@@ -2,7 +2,7 @@
 - [Grijalva Parra Francisco Leonel](Grijalva.md)
 - [Huaman Yance Kevin Sebastian](kevin)
 - [Loayza Segura Roger Salvador](Loayza.md)
-- [Lock Brañez Peter Alexander](pipo.md)
+- [Lock Brañez Peter Alexander](Peter)
 - [Otero Vicente Daniel Mauricio](otero.md)
 
 
