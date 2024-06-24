@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Empresa Topitop S.A.</title>
+  <style>
+    body {
+      font-family: sans-serif;
+    }
+
+    .container {
+      display: flex;
+    }
+
+    .sidebar {
+      width: 200px;
+      background-color: #f0f0f0;
+      padding: 20px;
+    }
+
+    .content {
+      flex: 1;
+      padding: 20px;
+    }
+
+    .header {
+      background-color: #eee;
+      padding: 10px;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .form-group {
+      margin-bottom: 10px;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    .form-group select {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    .button {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    th, td {
+      text-align: left;
+      padding: 8px;
+      border: 1px solid #ddd;
+    }
+
+    th {
+      background-color: #f0f0f0;
+    }
+
+    .table-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="sidebar">
+      <div class="header">
+        <img src="user.svg" alt="User Icon" width="50" height="50">
+        <h3>Empresa Topitop S.A.</h3>
+      </div>
+      <ul>
+        <li>usuario: gestor de produccion</li>
+        <li><img src="home.svg" alt="Home Icon" width="20" height="20"> datos personales</li>
+        <li><img src="wrench.svg" alt="Wrench Icon" width="20" height="20"> solicitud de herramienta</li>
+        <li><img src="checklist.svg" alt="Checklist Icon" width="20" height="20"> solicitud de pedido</li>
+        <li><img src="certificate.svg" alt="Certificate Icon" width="20" height="20"> registro de calidad</li>
+        <li><img src="file-text.svg" alt="File Text Icon" width="20" height="20"> actividades</li>
+        <li><img src="edit.svg" alt="Edit Icon" width="20" height="20"> reportes</li>
+        <li><img src="megaphone.svg" alt="Megaphone Icon" width="20" height="20"> quejas y reclamos</li>
+      </ul>
+    </div>
+    <div class="content">
+      <div class="header">
+        <h2>HISTORIAL DE ACTIVIDADES</h2>
+      </div>
+      <form>
+        <div class="form-group">
+          <label for="fechaInicio">Fecha de inicio:</label>
+          <select id="fechaInicio" name="fechaInicio">
+            <option value="">Select</option>
+            <option value="2023-04-01">2023-04-01</option>
+            <option value="2023-04-02">2023-04-02</option>
+            </select>
+        </div>
+        <div class="form-group">
+          <label for="fechaFin">Fecha de fin:</label>
+          <select id="fechaFin" name="fechaFin">
+            <option value="">Select</option>
+            <option value="2023-04-01">2023-04-01</option>
+            <option value="2023-04-02">2023-04-02</option>
+            </select>
+        </div>
+        <div class="form-group">
+          <label for="operario">Operario:</label>
+          <select id="operario" name="operario">
+            <option value="">Select</option>
+            <option value="OPE001">OPE001</option>
+            <option value="OPE002">OPE002</option>
+            <option value="OPE003">OPE003</option>
+            </select>
+        </div>
+        <div class="form-group">
+          <label for="EstadoAsignacion">Estado de asignacion:</label>
+          <select id="EstadoAsignacion" name="EstadoAsignacion">
+            <option value="">Select</option>
+            <option value="culminado">Culminado</option>
+            <option value="cancelado">Cancelado</option>
+            </select>
+        </div>
+        <div class="form-group">
+          <label for="gestor">Gestor:</label>
+          <select id="gestor" name="gestor">
+            <option value="">Select</option>
+            <option value="GES001">GES001</option>
+            <option value="GES002 ">GES002</option>
+            </select>
+        </div>
+        <div class="form-group">
+          <label for="asignacion">Asignación:</label>
+          <select id="asignacion" name="asignacion">
+            <option value="">Select</option>
+            <option value="AS1001">AS1001</option>
+            <option value="AS1002">AS1002</option>
+            <option value="AS1003">AS1003</option>
+            </select>
+        </div>
+        <button class="button" type="submit">BUSCAR</button>
+      </form>
+      <div class="table-header">
+        <h3>Listado de actividades</h3>
+        <div>
+          <img src="arrow-up.svg" alt="Arrow Up Icon" width="20" height="20">
+          <img src="arrow-down.svg" alt="Arrow Down Icon" width="20" height="20">
+        </div>
+      </div>
+      <table>
+        <thead>
+          <tr>
+            <th>ASIGNACIÓN</th>
+            <th>ID_OPERARIO</th>
+            <th>OPERARIO</th>
+            <th>FECHA</th>
+            <th>ACTIVIDAD</th>
+            <th>INICIO</th>
+            <th>FIN</th>
+            <th>ESTADO</th>
+            <th>LOTE</th>
+            <th>TALLER</th>
+            <th>ID_GESTOR</th>
+            <th>GESTOR</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>AS1001</td>
+            <td>OPE001</td>
+            <td>Juan Perez Valdivia</td>
+            <td>8/04/24</td>
+            <td>corte tela</td>
+            <td>8:00</td>
+            <td>15:00</td>
+            <td>culminado</td>
+            <td>LOT001</td>
+            <td>TAL001</td>
+            <td>GES001</td>
+            <td>Juan Perez Valdivia</td>
+          </tr>
+          <tr>
+            <td>AS1002</td>
+            <td>OPE002</td>
+            <td>Maria Dueñas Valdivia</td>
+            <td>8/04/24</td>
+            <td>pintado</td>
+            <td>16:00</td>
+            <td>22:00</td>
+            <td>cancelado</td>
+            <td>LOT002</td>
+            <td>TAL002</td>
+            <td>GES001</td>
+            <td>Juan Perez Valdivia</td>
+          </tr>
+          <tr>
+            <td>AS1003</td>
+            <td>OPE003</td>
+            <td>Emiliano Peralta Caballero</td>
+            <td>9/04/24</td>
+            <td>costura</td>
+            <td>11:00</td>
+            <td>22:00</td>
+            <td>culminado</td>
+            <td>LOT003</td>
+            <td>TAL003</td>
+            <td>GES001</td>
+            <td>Juan Perez Valdivia</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</body>
+</html>

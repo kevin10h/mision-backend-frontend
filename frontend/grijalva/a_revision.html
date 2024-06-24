@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Topitop S.A.</title>
+  <style>
+    body {
+      font-family: sans-serif;
+    }
+    .container {
+      display: flex;
+    }
+    .sidebar {
+      width: 200px;
+      background-color: #f0f0f0;
+      padding: 20px;
+    }
+    .content {
+      flex: 1;
+      padding: 20px;
+    }
+    .user {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+    .user-icon {
+      font-size: 30px;
+      margin-right: 10px;
+    }
+    .user-name {
+      font-weight: bold;
+    }
+    .nav-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+    .nav-icon {
+      font-size: 20px;
+      margin-right: 10px;
+    }
+    .nav-link {
+      color: #333;
+      text-decoration: none;
+    }
+    .table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    .table th, .table td {
+      border: 1px solid #ddd;
+      padding: 8px;
+    }
+    .table th {
+      background-color: #f0f0f0;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="sidebar">
+      <div class="user">
+        <i class="user-icon fa fa-user"></i>
+        <span class="user-name">operariox</span>
+      </div>
+      <div class="nav-item">
+        <i class="nav-icon fa fa-home"></i>
+        <a href="#" class="nav-link">datos personales</a>
+      </div>
+      <div class="nav-item">
+        <i class="nav-icon fa fa-wrench"></i>
+        <a href="#" class="nav-link">solicitar herramienta</a>
+      </div>
+      <div class="nav-item">
+        <i class="nav-icon fa fa-clipboard-list"></i>
+        <a href="#" class="nav-link">actividades</a>
+      </div>
+      <div class="nav-item">
+        <i class="nav-icon fa fa-bullhorn"></i>
+        <a href="#" class="nav-link">quejas y reclamos</a>
+      </div>
+    </div>
+    <div class="content">
+      <h1>ACTIVIDADES PENDIENTES</h1>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>DATA</th>
+            <th>ACTIVIDAD</th>
+            <th>INICIO</th>
+            <th>FIN</th>
+            <th>ESTADO</th>
+            <th>LOTE</th>
+            <th>TALLER</th>
+            <th>ACCIONES</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>8/04/24</td>
+            <td>corte tela</td>
+            <td>8:00 am</td>
+            <td>3:00 pm</td>
+            <td>en proceso</td>
+            <td>LOT001</td>
+            <td>TAL001</td>
+            <td><button class="button">ENVIAR A REVISIÓN</button></td>
+          </tr>
+          <tr>
+            <td>8/04/24</td>
+            <td>pintado</td>
+            <td>4:00 pm</td>
+            <td>10:00 pm</td>
+            <td>en proceso</td>
+            <td>LOT002</td>
+            <td>TAL002</td>
+            <td><button class="button">ENVIAR A REVISIÓN</button></td>
+          </tr>
+          <tr>
+            <td>9/04/24</td>
+            <td>costura</td>
+            <td>11:00 am</td>
+            <td>10:00 pm</td>
+            <td>en proceso</td>
+            <td>LOT003</td>
+            <td>TAL003</td>
+            <td><button class="button">ENVIAR A REVISIÓN</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</body>
+</html>

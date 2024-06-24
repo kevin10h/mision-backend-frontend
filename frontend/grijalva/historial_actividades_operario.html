@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+  display: flex;
+  margin-left: 50px;
+}
+
+.left {
+  width: 200px;
+  margin-right: 50px;
+  background-color: #ddd;
+  padding: 20px;
+}
+
+.right {
+  width: 600px;
+  background-color: #eee;
+  padding: 20px;
+}
+
+.title {
+  background-color: #ddd;
+  padding: 10px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.user {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.user .icon {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.options {
+  margin-bottom: 20px;
+}
+
+.options button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.options button:hover {
+  background-color: #3e8e41;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.table th,
+.table td {
+  text-align: left;
+  padding: 8px;
+  border: 1px solid #ddd;
+}
+
+.table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.table th {
+  background-color: #ddd;
+}
+
+.search {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.search input {
+  padding: 10px;
+  margin-right: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.search select {
+  padding: 10px;
+  margin-right: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.search button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.search button:hover {
+  background-color: #3e8e41;
+}
+
+.table-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.table-header .header-title {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.table-header .header-buttons {
+  display: flex;
+}
+
+.table-header .header-buttons button {
+  background-color: #ddd;
+  border: none;
+  color: black;
+  padding: 5px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.table-header .header-buttons button:hover {
+  background-color: #ccc;
+}
+
+.table-header .header-buttons button.prev {
+  margin-right: 10px;
+}
+
+.table-header .header-buttons button.next {
+  margin-left: 10px;
+}
+
+.table-header .header-buttons button.prev:disabled,
+.table-header .header-buttons button.next:disabled {
+  background-color: #eee;
+  cursor: not-allowed;
+}
+
+.table-header .header-buttons button.prev:disabled:hover,
+.table-header .header-buttons button.next:disabled:hover {
+  background-color: #eee;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+  <div class="left">
+    <div class="title">
+      Empresa Topitop S.A
+    </div>
+    <div class="user">
+      <div class="icon">
+        &#x20;
+      </div>
+      <p>usuario: operariox</p>
+    </div>
+    <div class="options">
+      <button>&#x2302; datos personales</button>
+      <button>&#x2692; solicitar herramienta</button>
+      <button>&#x231F; actividades</button>
+      <button>&#x1F50A; quejas y reclamos</button>
+    </div>
+  </div>
+  <div class="right">
+    <div class="title">
+      HISTORIAL DE ACTIVIDADES
+    </div>
+    <div class="search">
+      <input type="text" placeholder="fecha de inicio:">
+      <select>
+        <option value="select">select</option>
+      </select>
+      <input type="text" placeholder="fecha de fin:">
+      <select>
+        <option value="select">select</option>
+      </select>
+      <input type="text" placeholder="estado de actividad:">
+      <select>
+        <option value="select">select</option>
+      </select>
+      <button>BUSCAR</button>
+    </div>
+    <div class="table-header">
+      <div class="header-title">
+        ACTIVIDADES
+      </div>
+      <div class="header-buttons">
+        <button class="prev" disabled>&#x25C0;</button>
+        <button class="next">&#x25B6;</button>
+      </div>
+    </div>
+    <table class="table">
+      <tr>
+        <th>FECHA</th>
+        <th>ACTIVIDAD</th>
+        <th>INICIO</th>
+        <th>FIN</th>
+        <th>ESTADO</th>
+        <th>LOTE</th>
+        <th>TALLER</th>
+      </tr>
+      <tr>
+        <td>8/04/24</td>
+        <td>corte tela</td>
+        <td>8:00 am</td>
+        <td>3:00 pm</td>
+        <td>culminado</td>
+        <td>LOT001</td>
+        <td>TAL001</td>
+      </tr>
+      <tr>
+        <td>8/04/24</td>
+        <td>pintado</td>
+        <td>4:00 pm</td>
+        <td>10:00 pm</td>
+        <td>culminado</td>
+        <td>LOT002</td>
+        <td>TAL002</td>
+      </tr>
+      <tr>
+        <td>9/04/24</td>
+        <td>costura</td>
+        <td>11:00 am</td>
+        <td>10:00 pm</td>
+        <td>cancelado</td>
+        <td>LOT003</td>
+        <td>TAL003</td>
+      </tr>
+    </table>
+  </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: sans-serif;
+        }
+        .container {
+            display: flex;
+            gap: 20px;
+        }
+        .left-menu {
+            background-color: #ccc;
+            padding: 20px;
+            width: 200px;
+        }
+        .left-menu h1 {
+            text-align: center;
+        }
+        .left-menu ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .left-menu li {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .left-menu li i {
+            font-size: 1.5em;
+        }
+        .right-section {
+            background-color: #eee;
+            padding: 20px;
+            flex: 1;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        th, td {
+            text-align: left;
+            padding: 8px;
+            border: 1px solid #ddd;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .header h1 {
+            margin: 0;
+        }
+        .header .close {
+            font-size: 2em;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="left-menu">
+            <h1>Empresa Topitop S.A</h1>
+            <ul>
+                <li>
+                    <i class="fa fa-user"></i>
+                    <span>usuario: gestor de produccion</span>
+                </li>
+                <li>
+                    <i class="fa fa-home"></i>
+                    <span>datos personales</span>
+                </li>
+                <li>
+                    <i class="fa fa-wrench"></i>
+                    <span>solicitud de herramienta</span>
+                </li>
+                <li>
+                    <i class="fa fa-list-alt"></i>
+                    <span>solicitud de pedido</span>
+                </li>
+                <li>
+                    <i class="fa fa-certificate"></i>
+                    <span>registro de calidad</span>
+                </li>
+                <li>
+                    <i class="fa fa-clipboard-check"></i>
+                    <span>actividades</span>
+                </li>
+                <li>
+                    <i class="fa fa-file-alt"></i>
+                    <span>reportes</span>
+                </li>
+                <li>
+                    <i class="fa fa-bullhorn"></i>
+                    <span>quejas y reclamos</span>
+                </li>
+            </ul>
+        </div>
+        <div class="right-section">
+            <div class="header">
+                <h1>AUDITAR ACTIVIDAD</h1>
+                <span class="close">X</span>
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ASIGNACIÓN</th>
+                        <th>OPERARIO</th>
+                        <th>FECHA</th>
+                        <th>ACTIVIDAD</th>
+                        <th>INICIO</th>
+                        <th>FIN</th>
+                        <th>ESTADO</th>
+                        <th>LOTE</th>
+                        <th>TALLER</th>
+                        <th>CANCELAR ACTIVIDAD</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>AS1001</td>
+                        <td>OPE001</td>
+                        <td>8/04/24</td>
+                        <td>corte tela</td>
+                        <td>8:00</td>
+                        <td>15:00</td>
+                        <td>en proceso</td>
+                        <td>LOT001</td>
+                        <td>TAL001</td>
+                        <td><button>CANCELAR ACTIVIDAD</button></td>
+                    </tr>
+                    <tr>
+                        <td>AS1002</td>
+                        <td>OPE002</td>
+                        <td>8/04/24</td>
+                        <td>pintado</td>
+                        <td>16:00</td>
+                        <td>22:00</td>
+                        <td>en proceso</td>
+                        <td>LOT002</td>
+                        <td>TAL002</td>
+                        <td><button>CANCELAR ACTIVIDAD</button></td>
+                    </tr>
+                    <tr>
+                        <td>AS1003</td>
+                        <td>OPE003</td>
+                        <td>9/04/24</td>
+                        <td>costura</td>
+                        <td>11:00</td>
+                        <td>22:00</td>
+                        <td>en proceso</td>
+                        <td>LOT003</td>
+                        <td>TAL003</td>
+                        <td><button>CANCELAR ACTIVIDAD</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
