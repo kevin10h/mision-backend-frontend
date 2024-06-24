@@ -26,6 +26,11 @@ DROP TABLE IF EXISTS Tipo_Bonificacion CASCADE;
 DROP TABLE IF EXISTS Bonificacion CASCADE;
 DROP TABLE IF EXISTS Periodo_pago CASCADE;
 DROP TABLE IF EXISTS Nomina CASCADE;
+DROP TABLE IF EXISTS fallo CASCADE;
+DROP TABLE IF EXISTS estandar_Calidad CASCADE;
+DROP TABLE IF EXISTS mantenimiento_maquinaria CASCADE;
+
+
 
 -- Eliminar secuencia si existe
 DROP SEQUENCE IF EXISTS seq_solicitud;
@@ -366,6 +371,32 @@ CREATE TABLE Nomina
     FOREIGN KEY (Id_deduccion) REFERENCES Deduccion(Id_deduccion),
     FOREIGN KEY (Id_sueldo_base) REFERENCES Tipo_Sueldo_Base(Id_sueldo_base)
 );
+
+CREATE TABLE fallo (
+    id_fallo CHAR(6) PRIMARY KEY,
+    tipo_fallo VARCHAR(20),
+    id_herramienta CHAR(6),
+    descripcion_fallo VARCHAR(100),
+    fecha_fallo DATE,
+    FOREIGN KEY (id_herramienta) REFERENCES herramienta(id_herramienta)
+);
+
+CREATE TABLE estandar_de_calidad ( 
+	id_calidad CHAR(6) PRIMARY KEY, 
+	tipo_estandar VARCHAR(20), 
+	descripcion_estandar VARCHAR(50) );
+
+
+CREATE TABLE mantenimiento_maquinaria ( 
+	id_mantenimiento CHAR(6) PRIMARY KEY, 
+	tipo_mantenimiento CHAR(2), 
+	estado_mantenimiento VARCHAR(15), 
+	fecha_mantenimiento DATE NOT NULL, 
+	id_responsable CHAR(6), id_calidad CHAR(6), 
+	id_fallo CHAR(6), descripcion_mantenimiento VARCHAR(70), 
+	FOREIGN KEY (id_responsable) REFERENCES operario(id_operario), 
+	FOREIGN KEY (id_calidad) REFERENCES estandar_de_calidad(id_calidad), 
+	FOREIGN KEY (id_fallo) REFERENCES fallo(id_fallo) );
 
 CREATE OR REPLACE FUNCTION adjust_seq_solicitud() RETURNS TRIGGER AS $$
 BEGIN
