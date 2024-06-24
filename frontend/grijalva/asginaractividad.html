@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Topitop</title>
+  <style>
+    body {
+      font-family: sans-serif;
+    }
+    .container {
+      display: flex;
+    }
+    .sidebar {
+      width: 200px;
+      padding: 20px;
+      background-color: #f0f0f0;
+      border-right: 1px solid #ddd;
+    }
+    .main {
+      flex-grow: 1;
+      padding: 20px;
+    }
+    .user {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+    .user-icon {
+      font-size: 3em;
+      margin-right: 10px;
+    }
+    .user-info {
+      font-weight: bold;
+    }
+    .menu-item {
+      margin-bottom: 10px;
+    }
+    .menu-item-icon {
+      margin-right: 10px;
+    }
+    .form-container {
+      padding: 20px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+    }
+    .form-row {
+      margin-bottom: 15px;
+    }
+    .form-label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+    .form-input {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ddd;
+      border-radius: 3px;
+    }
+    .button {
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="sidebar">
+      <div class="user">
+        <i class="user-icon fas fa-user-circle"></i>
+        <div class="user-info">usuario: gestor de produccion</div>
+      </div>
+      <div class="menu-item">
+        <i class="menu-item-icon fas fa-home"></i>
+        <a href="#">datos personales</a>
+      </div>
+      <div class="menu-item">
+        <i class="menu-item-icon fas fa-wrench"></i>
+        <a href="#">solicitud de herramienta</a>
+      </div>
+      <div class="menu-item">
+        <i class="menu-item-icon fas fa-clipboard-list"></i>
+        <a href="#">solicitud de pedido</a>
+      </div>
+      <div class="menu-item">
+        <i class="menu-item-icon fas fa-certificate"></i>
+        <a href="#">registro de calidad</a>
+      </div>
+      <div class="menu-item">
+        <i class="menu-item-icon fas fa-clipboard-check"></i>
+        <a href="#">actividades</a>
+      </div>
+      <div class="menu-item">
+        <i class="menu-item-icon fas fa-file-alt"></i>
+        <a href="#">reportes</a>
+      </div>
+      <div class="menu-item">
+        <i class="menu-item-icon fas fa-bullhorn"></i>
+        <a href="#">quejas y reclamos</a>
+      </div>
+    </div>
+    <div class="main">
+      <h1>ASIGNAR ACTIVIDADES</h1>
+      <div class="form-container">
+        <div class="form-row">
+          <label for="actividad" class="form-label">Actividad:</label>
+          <select id="actividad" class="form-input">
+            <option value="">select</option>
+            </select>
+        </div>
+        <div class="form-row">
+          <label for="hora-inicio" class="form-label">hora de inicio:</label>
+          <select id="hora-inicio" class="form-input">
+            <option value="">select</option>
+            </select>
+        </div>
+        <div class="form-row">
+          <label for="lote" class="form-label">Lote:</label>
+          <select id="lote" class="form-input">
+            <option value="">select</option>
+            </select>
+        </div>
+        <div class="form-row">
+          <label for="operario" class="form-label">Operario:</label>
+          <select id="operario" class="form-input">
+            <option value="">select</option>
+            </select>
+        </div>
+        <div class="form-row">
+          <label for="hora-fin" class="form-label">hora de fin:</label>
+          <select id="hora-fin" class="form-input">
+            <option value="">select</option>
+            </select>
+        </div>
+        <div class="form-row">
+          <label for="fecha" class="form-label">Fecha:</label>
+          <select id="fecha" class="form-input">
+            <option value="">select</option>
+            </select>
+        </div>
+        <button class="button">Agregar Actividad</button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
