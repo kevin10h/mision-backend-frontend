@@ -30,7 +30,7 @@ DROP TABLE IF EXISTS Estado_Observacion CASCADE;
 DROP TABLE IF EXISTS Descripcion_observacion CASCADE;
 DROP TABLE IF EXISTS observacion CASCADE;
 DROP TABLE IF EXISTS fallo CASCADE;
-DROP TABLE IF EXISTS estandar_Calidad CASCADE;
+DROP TABLE IF EXISTS estandar_de_Calidad CASCADE;
 DROP TABLE IF EXISTS mantenimiento_maquinaria CASCADE;
 
 
