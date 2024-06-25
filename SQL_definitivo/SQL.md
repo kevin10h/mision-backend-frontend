@@ -199,7 +199,7 @@ CREATE TABLE mantenimiento_herramienta (
 CREATE TABLE Estado_Reclamo
 (
  Id_estado_reclamo CHAR(6) NOT NULL,
- Nom_estado_reclamo VARCHAR(50) NOT NULL,
+ Nom_estado_reclamo VARCHAR(15) NOT NULL,
  PRIMARY KEY (Id_estado_reclamo)
 );
 
@@ -226,7 +226,7 @@ CREATE TABLE Reclamo
 CREATE TABLE Estado_Observacion
 (
  Id_estado_observacion CHAR(6) NOT NULL,
- Nom_estado_observacion VARCHAR(50) NOT NULL,
+ Nom_estado_observacion VARCHAR(15) NOT NULL,
  PRIMARY KEY (Id_estado_observacion)
 );
 
