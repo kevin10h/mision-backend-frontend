@@ -14,9 +14,9 @@ DROP TABLE IF EXISTS operario_telefono CASCADE;
 DROP TABLE IF EXISTS estado_soli_herra CASCADE;
 DROP TABLE IF EXISTS solicitud_herramienta CASCADE;
 DROP TABLE IF EXISTS mantenimiento_herramienta CASCADE;
-DROP TABLE IF EXISTS Estado_Reclamo CASCADE;
-DROP TABLE IF EXISTS Descripcion_reclamo CASCADE;
-DROP TABLE IF EXISTS Reclamo CASCADE;
+DROP TABLE IF EXISTS estado_reclamo CASCADE;
+DROP TABLE IF EXISTS descripcion_reclamo CASCADE;
+DROP TABLE IF EXISTS reclamo CASCADE;
 DROP TABLE IF EXISTS Reporte_reclamo CASCADE;
 DROP TABLE IF EXISTS Reporte_herramienta CASCADE;
 DROP TABLE IF EXISTS Tipo_deduccion CASCADE;
@@ -26,8 +26,8 @@ DROP TABLE IF EXISTS Tipo_Bonificacion CASCADE;
 DROP TABLE IF EXISTS Bonificacion CASCADE;
 DROP TABLE IF EXISTS Periodo_pago CASCADE;
 DROP TABLE IF EXISTS Nomina CASCADE;
-DROP TABLE IF EXISTS Estado_Observacion CASCADE;
-DROP TABLE IF EXISTS Descripcion_observacion CASCADE;
+DROP TABLE IF EXISTS estado_observacion CASCADE;
+DROP TABLE IF EXISTS descripcion_observacion CASCADE;
 DROP TABLE IF EXISTS observacion CASCADE;
 DROP TABLE IF EXISTS fallo CASCADE;
 DROP TABLE IF EXISTS estandar_de_Calidad CASCADE;
@@ -196,58 +196,58 @@ CREATE TABLE mantenimiento_herramienta (
     id_herramienta VARCHAR(6) NOT NULL,
     FOREIGN KEY (id_herramienta) REFERENCES herramienta(id_herramienta)
 );
-CREATE TABLE Estado_Reclamo
+CREATE TABLE estado_reclamo
 (
- Id_estado_reclamo CHAR(6) NOT NULL,
- Nom_estado_reclamo VARCHAR(15) NOT NULL,
- PRIMARY KEY (Id_estado_reclamo)
+ id_estado_reclamo CHAR(6) NOT NULL,
+ nom_estado_reclamo VARCHAR(15) NOT NULL,
+ PRIMARY KEY (id_estado_reclamo)
 );
 
-CREATE TABLE Descripcion_reclamo
+CREATE TABLE descripcion_reclamo
 (
- Id_descrip_reclamo CHAR(6) NOT NULL,
- Nom_descrip_reclamo VARCHAR(50) NOT NULL,
- PRIMARY KEY (Id_descrip_reclamo)
+ id_descrip_reclamo CHAR(6) NOT NULL,
+ nom_descrip_reclamo VARCHAR(50) NOT NULL,
+ PRIMARY KEY (id_descrip_reclamo)
 );
 
-CREATE TABLE Reclamo
+CREATE TABLE reclamo
 (
- Id_reclamo CHAR(6) NOT NULL,
- Fecha_reclamo DATE NOT NULL,
- Id_operario CHAR(6) NOT NULL,
- Id_descrip_reclamo CHAR(6) NOT NULL,
- Id_estado_reclamo CHAR(6) NOT NULL,
- PRIMARY KEY (Id_reclamo),
- FOREIGN KEY (Id_operario) REFERENCES Operario(Id_operario),
- FOREIGN KEY (Id_descrip_reclamo) REFERENCES Descripcion_reclamo(Id_descrip_reclamo),
- FOREIGN KEY (Id_estado_reclamo) REFERENCES Estado_Reclamo(Id_estado_reclamo)
+ id_reclamo CHAR(6) NOT NULL,
+ fecha_reclamo DATE NOT NULL,
+ id_operario CHAR(6) NOT NULL,
+ id_descrip_reclamo CHAR(6) NOT NULL,
+ id_estado_reclamo CHAR(6) NOT NULL,
+ PRIMARY KEY (id_reclamo),
+ FOREIGN KEY (id_operario) REFERENCES operario(id_operario),
+ FOREIGN KEY (id_descrip_reclamo) REFERENCES descripcion_reclamo(id_descrip_reclamo),
+ FOREIGN KEY (id_estado_reclamo) REFERENCES estado_reclamo(id_estado_reclamo)
 );
 
-CREATE TABLE Estado_Observacion
+CREATE TABLE estado_observacion
 (
- Id_estado_observacion CHAR(6) NOT NULL,
- Nom_estado_observacion VARCHAR(15) NOT NULL,
- PRIMARY KEY (Id_estado_observacion)
+ id_estado_observacion CHAR(6) NOT NULL,
+ nom_estado_observacion VARCHAR(15) NOT NULL,
+ PRIMARY KEY (id_estado_observacion)
 );
 
-CREATE TABLE Descripcion_observacion
+CREATE TABLE descripcion_observacion
 (
- Id_descrip_observacion CHAR(6) NOT NULL,
- Nom_descrip_observacion VARCHAR(50) NOT NULL,
- PRIMARY KEY (Id_descrip_observacion)
+ id_descrip_observacion CHAR(6) NOT NULL,
+ nom_descrip_observacion VARCHAR(50) NOT NULL,
+ PRIMARY KEY (id_descrip_observacion)
 );
 
-CREATE TABLE Observacion
+CREATE TABLE observacion
 (
- Id_observacion CHAR(6) NOT NULL,
- Fecha_observacion DATE NOT NULL,
+ id_observacion CHAR(6) NOT NULL,
+ fecha_observacion DATE NOT NULL,
  id_asignacion CHAR(6) NOT NULL,
- Id_descrip_observacion CHAR(6) NOT NULL,
- Id_estado_observacion CHAR(6) NOT NULL,
- PRIMARY KEY (Id_observacion),
+ id_descrip_observacion CHAR(6) NOT NULL,
+ id_estado_observacion CHAR(6) NOT NULL,
+ PRIMARY KEY (id_observacion),
  FOREIGN KEY (id_asignacion) REFERENCES asignacion_actividad(id_asignacion),
- FOREIGN KEY (Id_descrip_observacion) REFERENCES Descripcion_observacion(Id_descrip_observacion),
- FOREIGN KEY (Id_estado_observacion) REFERENCES Estado_Observacion(Id_estado_observacion)
+ FOREIGN KEY (id_descrip_observacion) REFERENCES descripcion_observacion(id_descrip_observacion),
+ FOREIGN KEY (id_estado_observacion) REFERENCES estado_observacion(id_estado_observacion)
 );
 
 CREATE TABLE Reporte_reclamo
