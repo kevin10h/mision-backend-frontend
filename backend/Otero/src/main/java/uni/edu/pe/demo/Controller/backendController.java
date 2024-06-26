@@ -13,30 +13,12 @@ public class backendController {
     @Autowired
     private BackendService service;
 
-    @PostMapping(value = "/insertarCatalago1",
-            produces = "application/json;charset=UTF-8",
-            consumes = "application/json")
-    public Tipo_Vehiculo insertarCatalago1(@RequestBody Tipo_Vehiculo tipoVehiculo) {
-        return service.insertarCatalago1(tipoVehiculo);
-    }
-    @PostMapping( value = "/insertarCatalogo2",
-            produces = "application/json;charset=UTF-8",
-            consumes = "application/json")
-    public Transporte insertarCatalogo2(@RequestBody Transporte transporte){
-        return service.insertarCatalago2(transporte);
-    }
-    @PostMapping( value = "/insertarCatalogo3",
-            produces = "application/json;charset=UTF-8",
-            consumes = "application/json")
-    public Insumo insertarCatalago3(@RequestBody Insumo insumo){
-        return service.insertarCatalago3(insumo);
-    }
-    @PostMapping( value = "/insertarCatalogo5",
+    @PostMapping( value = "/insertarSolicitudInsumo",
             produces = "application/json;charset=UTF-8",
             consumes = "application/json"
     )
-    public Solicitud_insumo InsertarCatalago5(@RequestBody Solicitud_insumo solicitudInsumo){
-        return  service.InsertarCatalago5(solicitudInsumo);
+    public Solicitud_insumo InsertarSolicitudInsumo(@RequestBody Solicitud_insumo solicitudInsumo){
+        return  service.InsertarSolicitudInsumo(solicitudInsumo);
     }
    @GetMapping( value = "/obtenerDatosTransporte",
            produces = "application/json;charset=UTF-8",
@@ -44,9 +26,9 @@ public class backendController {
 
    )
     public
-   RespuestaDetalleTabla obtenerDatosTransporte(){
+   RespuestaDetalleTabla obtenerDatosTransporte(String id_transporte){
        RespuestaDetalleTabla rpta =  new RespuestaDetalleTabla();
-       rpta.setReportes(service.obtenerDatosTransporte());
+       rpta.setReportes(service.obtenerDatosTransporte(id_transporte));
         return rpta;
    }
     @PutMapping( value = "/ActualizarTabla",
